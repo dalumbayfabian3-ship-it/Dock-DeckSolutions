@@ -331,3 +331,78 @@ body {
     background: var(--accent-bright);
     transform: translateY(-5px);
 }
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablet & Mobile Screens (max 1024px) */
+@media screen and (max-width: 1024px) {
+    .container, .about-grid {
+        padding: 0 5%;
+        grid-template-columns: 1fr; /* Stack About image and text */
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+/* Mobile Phones (max 768px) */
+@media screen and (max-width: 768px) {
+    /* Navbar Mobile Layout */
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Hidden by default */
+        top: 70px;
+        flex-direction: column;
+        background: #0a2342; /* Your primary navy color */
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 40px 0;
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in when active */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Show the Hamburger Menu icon */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #ffffff;
+        display: block;
+    }
+
+    /* Hero Section Adjustments */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Services stack to 1 column */
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* About features stack to 1 column */
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+}
