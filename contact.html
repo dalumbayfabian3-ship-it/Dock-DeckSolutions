@@ -2,51 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Dock & Deck Solutions | Yacht Crew, Engineering & Marine Supplies</title>
-    <meta name="description" content="Dock & Deck Solutions provides elite yacht crew placement, global provisioning, and certified marine engineering services. Anchored in excellence in Bali, Indonesia.">
-    <link rel="canonical" href="https://www.DNDsolutions.com/Homepage">
-    <link rel="icon" type="image/x-icon" href="logo.ico">
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MarineBusiness",
-      "name": "Dock & Deck Solutions",
-      "description": "Professional yacht crew agency, marine engineering, and vessel provisioning services.",
-      "url": "https://www.DNDsolutions.com",
-      "telephone": "+6285194328743",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "JALAN TUKAD BADUNG XIX NO 20B",
-        "addressLocality": "Denpasar",
-        "addressRegion": "Bali",
-        "postalCode": "80239",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-8.6705", 
-        "longitude": "115.2126"
-      }
-    }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Contact Us | Dock & Deck Solutions</title>
+    <meta name="description" content="Get in touch with Dock & Deck Solutions for yacht crew, provisioning, and marine engineering support.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
+
+    <style>
+        /* Force 2-Column Mobile Layout specifically for this page */
+        @media (max-width: 768px) {
+            .contact-mobile-grid .about-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1.3fr !important;
+                gap: 15px !important;
+                padding: 0 10px !important;
+                align-items: start !important;
+            }
+            .contact-col {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .mobile-map-wrapper {
+                height: 120px !important;
+                border-radius: 4px;
+                overflow: hidden;
+                border: 1px solid #eee;
+            }
+            .contact-card-mini {
+                background: #f4f7f9;
+                padding: 10px;
+                border-radius: 6px;
+                margin-top: 10px;
+            }
+            .subpage .menu-toggle .bar {
+                background: var(--accent) !important;
+            }
+            .section-title {
+                text-align: left !important;
+                font-size: 1.1rem !important;
+            }
+        }
+
+        /* Stronger Location Font Styling */
+        .strong-location {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .location-label {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+    </style>
 </head>
-<body>
+<body class="subpage">
+
     <div id="scroll-progress"></div>
 
-    <nav class="navbar" id="main-nav">
+    <nav class="navbar navbar-scrolled">
         <div class="logo">
-            <img src="logo.png" alt="Dock and Deck Solutions Logo" class="littlelogo">
+            <img src="Logo.png" alt="Dock & Deck Solutions" class="littlelogo">
             <a href="index.html">DOCK & <span>DECK SOLUTIONS</span></a>
         </div>
 
@@ -56,117 +85,138 @@
             <span class="bar"></span>
         </div>
 
-        <ul class="nav-links" id="nav-menu">
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="contact.html" class="primary-btn nav-cta">Contact Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="contact.html" class="primary-btn nav-cta">Get a Quote</a></li>
         </ul>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="reveal">Dock & Deck Solutions</h1>
-            <p class="reveal">Marine engineering, Professional cleaning, and Premium provisioning services.</p>
-            <div class="hero-cta reveal">
-                <a href="#services" class="primary-btn">Explore Our Services</a>
-            </div>
+    <header class="hero" style="background: linear-gradient(rgba(10,35,66,0.8), rgba(10,35,66,0.8)), url('https://images.pexels.com/photos/144024/pexels-photo-144024.jpeg') center/cover;">
+        <div class="hero-content reveal">
+            <h1 style="letter-spacing: 2px;">GET IN TOUCH</h1>
+            <p>Ready to assist your vessel.</p>
         </div>
-    </section>
+    </header>
 
-    <section id="about" class="about-section">
-        <div class="container about-grid">
-            <div class="about-image scroll-reveal">
-                <img src="https://images.pexels.com/photos/5416429/pexels-photo-5416429.jpeg" alt="Yacht Management and Maritime Excellence">
-            </div>
+    <main class="about-section contact-mobile-grid" style="padding: 60px 0;">
+        <div class="about-grid scroll-reveal">
             
-            <div class="about-text scroll-reveal">
-                <h2 class="section-title">ANCHORED IN EXCELLENCE</h2>
-                <p class="lead-text">
-                    <strong>Dock & Deck Solutions</strong> is a trusted marine service provider specializing in comprehensive yacht support.
-                </p>
-                <p>
-                    With a deep understanding of life on the water, we deliver reliable, efficient, and detail-oriented solutions tailored to the unique demands of both private and charter vessels.
-                </p>
-                
-                <div class="about-features">
-                    <div class="feature-item">
-                        <strong>Marine Engineering</strong>
-                        <p>Expert diagnostics, maintenance, and repairs for safety.</p>
-                    </div>
-                    <div class="feature-item">
-                        <strong>Professional Cleaning</strong>
-                        <p>Meticulous interior and exterior detailing.</p>
-                    </div>
-                    <div class="feature-item">
-                        <strong>Premium Provisioning</strong>
-                        <p>Sourcing high-quality supplies for captains and crew.</p>
-                    </div>
-                    <div class="feature-item">
-                        <strong>Vessel Reliability</strong>
-                        <p>Tailored solutions for rigorous yachting demands.</p>
+            <div class="about-text contact-col">
+                <div style="margin-bottom: 25px;">
+                    <h3 class="location-label">OUR LOCATION</h3>
+                    <p class="strong-location" style="margin-bottom: 15px;">
+                        JALAN TUKAD BADUNG XIX NO 20B<br>
+                        DENPASAR BALI, 80239 INDONESIA
+                    </p>
+                    <div class="mobile-map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.135243171853!2d115.2281895!3d-8.6786653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2408c5c4e976b%3A0xc3f3453b3419086c!2sJl.%20Tukad%20Badung%20XIX%20No.20b%2C%20Renon%2C%20Denpasar%20Selatan%2C%20Kota%20Denpasar%2C%20Bali%2080234!5e0!3m2!1sen!2sid!4v1711200000000!5m2!1sen!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
+
+                <div class="contact-card-mini">
+                    <h3 style="font-family: 'Oswald'; color: var(--primary); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px;">DIRECT CONTACT</h3>
+                    <p style="font-size: 0.75rem; margin: 8px 0;"><strong>WhatsApp:</strong> +62 851 9432 8743</p>
+                    <p style="font-size: 0.75rem; margin-bottom: 15px; word-break: break-all; font-weight: 600;">dockanddecksolution@gmail.com</p>
+                    <button onclick="toggleQR()" class="primary-btn" style="width: 100%; font-size: 0.65rem; padding: 10px; cursor: pointer; font-weight: 700;">Scan Business QR</button>
+                </div>
+            </div>
+
+            <div class="about-text contact-col form-mobile-container">
+                <h2 class="section-title" style="margin-bottom: 10px;">SEND MESSAGE</h2>
                 
-                <a href="contact.html" class="primary-btn">Request Maritime Support</a>
+                <form id="marineContactForm" action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="hidden" name="access_key" value="4944f480-4740-4520-9ec9-6847b709ec87">
+                    <input type="hidden" name="redirect" value="thank-you.html">
+
+                    <input type="text" name="name" required placeholder="Full Name" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem; font-family: 'Inter';">
+                    
+                    <input type="email" name="email" required placeholder="Email Address" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem; font-family: 'Inter';">
+
+                    <select name="subject" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; background: white; font-size: 0.85rem; font-family: 'Inter';">
+                        <option value="General">General Inquiry</option>
+                        <option value="quote">Request a Technician</option>
+                        <option value="crew">Crew Inquiry</option>
+                        <option value="tech">Cleaning Inquiry</option>
+                        <option value="supplies">Supply Inquiry</option>
+                        <option value="fuel">Fuel Inquiry</option>
+                    </select>
+
+                    <textarea name="message" rows="4" required placeholder="How can we help?" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem; resize: none; font-family: 'Inter';"></textarea>
+
+                    <button type="submit" class="primary-btn" style="width: 100%; padding: 15px; cursor: pointer; font-size: 0.9rem; font-weight: 700; font-family: 'Oswald'; letter-spacing: 1px;">Submit Inquiry</button>
+                </form>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="services" class="services-container">
-        <div class="section-header scroll-reveal">
-            <h2 class="section-title">Our Specialized Services</h2>
+    <div id="qrModal" class="qr-modal" style="display: none; position: fixed; z-index: 10001; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center;">
+        <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; position: relative; max-width: 350px; width: 90%;">
+            <span onclick="toggleQR()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; color: #888;">×</span>
+            <h3 style="font-family: 'Oswald'; color: var(--primary); margin-bottom: 10px;">CONTACT QR</h3>
+            <img src="QRBUSINESS.jpg" alt="QR Code" style="width: 100%; border-radius: 8px;">
         </div>
-        
-        <div class="service-list">
-            <div class="service-card scroll-reveal">
-                <div class="card-icon" aria-hidden="true">⚓</div>
-                <h3>Yacht Crew Agency</h3>
-                <p>Strategic maritime talent placement for private and commercial global fleets.</p>
-                <a href="yacht-crew.html" class="primary-btn btn-small">Explore Page</a>
-            </div>
+    </div>
 
-            <div class="service-card scroll-reveal">
-                <div class="card-icon" aria-hidden="true">📦</div>
-                <h3>Global Provisioning</h3>
-                <p>Premium victualling and supply chain management for offshore endurance.</p>
-                <a href="provisioning.html" class="primary-btn btn-small">Explore Page</a>
-            </div>
-
-            <div class="service-card scroll-reveal">
-                <div class="card-icon" aria-hidden="true">⚙️</div>
-                <h3>Marine Engineering</h3>
-                <p>Expert diagnostics, maintenance, and repairs for optimal vessel performance.</p>
-                <a href="marine-engineering.html" class="primary-btn btn-small">Explore Page</a>
-            </div>
-
-            <div class="service-card scroll-reveal">
-                <div class="card-icon" aria-hidden="true">✨</div>
-                <h3>Professional Cleaning</h3>
-                <p>Meticulous interior and exterior detailing using marine-safe products.</p>
-                <a href="cleaning.html" class="primary-btn btn-small">Explore Page</a>
-            </div>
-
-            <div class="service-card scroll-reveal">
-                <div class="card-icon" aria-hidden="true">🛠️</div>
-                <h3>Vessel Refurbishing</h3>
-                <p>Complete aesthetic and structural restoration to maintain vessel value.</p>
-                <a href="refurbishing.html" class="primary-btn btn-small">Explore Page</a>
-            </div>
-
-            <div class="service-card scroll-reveal">
-                <div class="card-icon" aria-hidden="true">⛽</div>
-                <h3>Refueling & Bunkering</h3>
-                <p>Efficient, high-quality marine fuel delivery and coordination.</p>
-                <a href="refueling.html" class="primary-btn btn-small">Explore Page</a>
-            </div>
+    <div id="thankYouModal" class="qr-modal" style="display: none; position: fixed; z-index: 10002; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 35, 66, 0.95); align-items: center; justify-content: center;">
+        <div style="background: white; padding: 40px; border-radius: 12px; text-align: center; max-width: 400px; width: 90%;">
+            <div style="width: 60px; height: 60px; background: #4BB543; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 30px;">✓</div>
+            <h2 style="font-family: 'Oswald'; color: var(--primary); margin-bottom: 10px;">SENT!</h2>
+            <p style="color: #666; font-size: 0.9rem; margin-bottom: 25px;">We will contact you within 24 hours.</p>
+            <a href="index.html" class="primary-btn" style="width: 100%; display: block; text-decoration: none; padding: 12px 0;">Return Home</a>
         </div>
-    </section>
+    </div>
 
     <footer class="main-footer">
-        <p>© 2026 Dock & Deck Solutions. All Rights Reserved.</p>
+        <div class="logo" style="justify-content: center; margin-bottom: 15px;">
+            <a href="index.html" style="color: white; text-decoration: none;">DOCK & <span style="color: var(--accent);">DECK SOLUTIONS</span></a>
+        </div>
+        <p style="font-size: 0.75rem; opacity: 0.7; text-align: center;">© 2026 Dock & Deck Solutions. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function toggleQR() {
+            const modal = document.getElementById('qrModal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        const contactForm = document.getElementById('marineContactForm');
+        const thankYouModal = document.getElementById('thankYouModal');
+
+        contactForm.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            const submitBtn = ev.target.querySelector('button');
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
+
+            const data = new FormData(ev.target);
+            fetch(ev.target.action, {
+                method: ev.target.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    thankYouModal.style.display = 'flex';
+                    contactForm.reset();
+                } else {
+                    alert("Submission failed. Please try again.");
+                }
+                submitBtn.innerText = "Submit Inquiry";
+                submitBtn.disabled = false;
+            }).catch(() => {
+                alert("Network error.");
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
