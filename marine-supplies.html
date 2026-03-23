@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Marine Supplies | Dock & Deck Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -16,6 +16,13 @@
             <img src="Logo.png" alt="logo" class="littlelogo">
             <a href="index.html">DOCK & <span>DECK SOLUTIONS</span></a>
         </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#services">Services</a></li>
@@ -31,40 +38,38 @@
     </header>
 
     <main class="about-section">
-        <div class="about-grid scroll-reveal" style="grid-template-columns: 1fr; max-width: 1000px; margin: 0 auto;">
+        <div class="about-grid scroll-reveal" style="max-width: 1000px; margin: 0 auto; display: block;">
             
             <div class="about-text" style="text-align: center;">
                 <h2 class="section-title">EQUIPMENT SOLUTIONS</h2>
                 <p class="lead-text" style="margin-bottom: 50px;">From essential consumables to heavy-duty deck machinery, we provide a streamlined procurement process.</p>
                 
-                <div class="service-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; text-align: left;">
-                    
-                    <div class="service-card" style="padding: 30px; border-bottom: 3px solid var(--accent); background: #fdfdfd; border-radius: 4px;">
-                        <strong style="color: var(--accent); display: block; font-family: 'Oswald'; margin-bottom: 12px; font-size: 1.2rem;">🛡️ SAFETY & LSA</strong>
-                        <p style="font-size: 0.9rem; line-height: 1.6;">SOLAS compliant life rafts, life jackets, and emergency signaling equipment for crew protection.</p>
+                <div class="service-list-grid">
+                    <div class="service-card supply-card">
+                        <strong class="supply-tag">🛡️ SAFETY & LSA</strong>
+                        <p>SOLAS compliant life rafts, life jackets, and emergency signaling equipment.</p>
                     </div>
 
-                    <div class="service-card" style="padding: 30px; border-bottom: 3px solid var(--accent); background: #fdfdfd; border-radius: 4px;">
-                        <strong style="color: var(--accent); display: block; font-family: 'Oswald'; margin-bottom: 12px; font-size: 1.2rem;">⚓ DECK HARDWARE</strong>
-                        <p style="font-size: 0.9rem; line-height: 1.6;">Marine-grade stainless steel fittings, high-tensile shackles, and premium mooring lines.</p>
+                    <div class="service-card supply-card">
+                        <strong class="supply-tag">⚓ DECK HARDWARE</strong>
+                        <p>Marine-grade stainless steel fittings, shackles, and premium mooring lines.</p>
                     </div>
 
-                    <div class="service-card" style="padding: 30px; border-bottom: 3px solid var(--accent); background: #fdfdfd; border-radius: 4px;">
-                        <strong style="color: var(--accent); display: block; font-family: 'Oswald'; margin-bottom: 12px; font-size: 1.2rem;">🛠️ TECHNICAL TOOLS</strong>
-                        <p style="font-size: 0.9rem; line-height: 1.6;">Pneumatic tools, specialized marine pumps, and critical engine room consumables.</p>
+                    <div class="service-card supply-card">
+                        <strong class="supply-tag">🛠️ TECHNICAL TOOLS</strong>
+                        <p>Pneumatic tools, specialized marine pumps, and engine room consumables.</p>
                     </div>
 
-                    <div class="service-card" style="padding: 30px; border-bottom: 3px solid var(--accent); background: #fdfdfd; border-radius: 4px;">
-                        <strong style="color: var(--accent); display: block; font-family: 'Oswald'; margin-bottom: 12px; font-size: 1.2rem;">🧼 MAINTENANCE</strong>
-                        <p style="font-size: 0.9rem; line-height: 1.6;">Marine-grade coatings, anti-fouling solutions, and specialized eco-friendly cleaning agents.</p>
+                    <div class="service-card supply-card">
+                        <strong class="supply-tag">🧼 MAINTENANCE</strong>
+                        <p>Marine-grade coatings, anti-fouling, and eco-friendly cleaning agents.</p>
                     </div>
-                    
                 </div>
 
-                <div style="margin-top: 80px; padding: 50px 40px; background: #f9f9f9; border-radius: 8px; border: 1px solid #eee;">
-                    <h4 style="font-family: 'Oswald'; margin-bottom: 15px; color: var(--primary); letter-spacing: 1px; text-transform: uppercase;">Need a specific component?</h4>
-                    <p style="color: #666; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Provide us with your part numbers or technical specifications for an immediate, competitive quote and delivery timeline.</p>
-                    <a href="contact.html" class="primary-btn" style="padding: 15px 50px;">Request Supply Quote</a>
+                <div class="quote-box">
+                    <h4>Need a specific component?</h4>
+                    <p>Provide us with your part numbers or specifications for an immediate, competitive quote.</p>
+                    <a href="contact.html" class="primary-btn">Request Supply Quote</a>
                 </div>
             </div>
         </div>
