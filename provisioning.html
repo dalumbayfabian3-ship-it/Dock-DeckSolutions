@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Provisioning | Dock & Deck Solutions</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body class="subpage">
 
@@ -16,6 +16,13 @@
             <img src="Logo.png" alt="logo" class="littlelogo">
             <a href="index.html">DOCK & <span>DECK SOLUTIONS</span></a>
         </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#services">Services</a></li>
@@ -25,55 +32,96 @@
 
     <header class="hero" style="background-image: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.85)), url('https://images.pexels.com/photos/6750258/pexels-photo-6750258.jpeg');">
         <div class="hero-content reveal">
-            <h1 style="letter-spacing: 2px;">PROVISIONING</h1>
-            <p>Premium victualling and supply chain management for maritime endurance.</p>
+            <span class="subtitle">LOGISTICS & SUPPLY</span>
+            <h1>PROVISIONING</h1>
+            <div class="hero-line"></div>
         </div>
     </header>
 
-    <main class="about-section">
-        <div class="about-grid scroll-reveal" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto;">
+    <main class="provisioning-container">
+        <section class="intro-block scroll-reveal">
+            <h2 class="section-title">MARITIME SHIP CHANDLERY</h2>
+            <p class="lead-text">Strategic supply chain management ensuring unbroken cold-chain delivery and premium victualling at every major port of call.</p>
+        </section>
+
+        <div class="provisioning-grid scroll-reveal">
             
-            <div class="about-text" style="text-align: center;">
-                <h2 class="section-title">VICTUALLING & STORES</h2>
-                <p class="lead-text">Complete Ship Chandlery services, ensuring high-quality provisions at any port of call.</p>
-                
-                <div class="service-list" style="margin: 50px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left;">
-                    
-                    <div style="padding: 20px; border-left: 3px solid var(--accent); background: #fdfdfd;">
-                        <strong style="color: var(--primary); display: block; margin-bottom: 10px; font-family: 'Oswald'; font-size: 1.1rem;">✅ FRESH & FROZEN STORES</strong>
-                        <p style="font-size: 0.9rem; color: #555;">Premium local and imported produce with unbroken cold-chain delivery.</p>
-                    </div>
-
-                    <div style="padding: 20px; border-left: 3px solid var(--accent); background: #fdfdfd;">
-                        <strong style="color: var(--primary); display: block; margin-bottom: 10px; font-family: 'Oswald'; font-size: 1.1rem;">✅ DRY STORES</strong>
-                        <p style="font-size: 0.9rem; color: #555;">Bulk procurement of specialty grains, international pantry staples, and canned goods.</p>
-                    </div>
-
-                    <div style="padding: 20px; border-left: 3px solid var(--accent); background: #fdfdfd;">
-                        <strong style="color: var(--primary); display: block; margin-bottom: 10px; font-family: 'Oswald'; font-size: 1.1rem;">✅ TECHNICAL STORES</strong>
-                        <p style="font-size: 0.9rem; color: #555;">Engine parts, deck consumables, and specialized tools for vessel maintenance.</p>
-                    </div>
-
-                    <div style="padding: 20px; border-left: 3px solid var(--accent); background: #fdfdfd;">
-                        <strong style="color: var(--primary); display: block; margin-bottom: 10px; font-family: 'Oswald'; font-size: 1.1rem;">✅ BONDED GOODS</strong>
-                        <p style="font-size: 0.9rem; color: #555;">Secure handling and delivery of high-value inventory and specialty beverages.</p>
-                    </div>
-
+            <div class="prov-card">
+                <div class="prov-header">
+                    <span class="prov-icon">❄️</span>
+                    <h3>FRESH & FROZEN</h3>
                 </div>
-
-                <div style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
-                    <p style="margin-bottom: 25px; font-style: italic; color: #666;">Ready to coordinate your next delivery?</p>
-                    <a href="contact.html" class="primary-btn" style="padding: 15px 40px;">Request Provisioning Quote</a>
+                <div class="prov-body">
+                    <p>Sourcing premium local and imported produce. We guarantee temperature-controlled logistics for maximum shelf-life and quality.</p>
+                    <ul class="prov-list">
+                        <li>Grade-A Meats</li>
+                        <li>Organic Produce</li>
+                        <li>Premium Seafood</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="prov-card">
+                <div class="prov-header">
+                    <span class="prov-icon">📦</span>
+                    <h3>DRY STORES</h3>
+                </div>
+                <div class="prov-body">
+                    <p>Global procurement of specialty grains, international pantry staples, and bulk consumables for long-range voyages.</p>
+                    <ul class="prov-list">
+                        <li>Specialty Spices</li>
+                        <li>Bulk Grains</li>
+                        <li>International Brands</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prov-card">
+                <div class="prov-header">
+                    <span class="prov-icon">⚙️</span>
+                    <h3>TECHNICAL STORES</h3>
+                </div>
+                <div class="prov-body">
+                    <p>Authorized supply of engine room components, deck consumables, and specialized maritime tools for critical maintenance.</p>
+                    <ul class="prov-list">
+                        <li>IMPA/ISSA Catalog</li>
+                        <li>Engine Spares</li>
+                        <li>Cleaning Supplies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prov-card">
+                <div class="prov-header">
+                    <span class="prov-icon">🔒</span>
+                    <h3>BONDED GOODS</h3>
+                </div>
+                <div class="prov-body">
+                    <p>Secure handling and delivery of high-value inventory, premium beverages, and tobacco under strict customs compliance.</p>
+                    <ul class="prov-list">
+                        <li>Duty-Free Supply</li>
+                        <li>Fine Wines</li>
+                        <li>Luxury Beverages</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+
+        <section class="cta-banner scroll-reveal">
+            <div class="cta-content">
+                <h3>READY FOR DEPARTURE?</h3>
+                <p>Coordinate your next delivery with our logistics team.</p>
+                <a href="contact.html" class="primary-btn">Request Supply Quote</a>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
         <div class="logo" style="justify-content: center; margin-bottom: 20px;">
             <a href="index.html" style="color: white; text-decoration: none;">DOCK & <span style="color: var(--accent);">DECK SOLUTIONS</span></a>
         </div>
-        <p style="font-size: 0.85rem; opacity: 0.7;">© 2026 Dock & Deck Solutions. All Rights Reserved.</p>
+        <p style="font-size: 0.85rem; opacity: 0.7; text-align: center;">© 2026 Dock & Deck Solutions. All Rights Reserved.</p>
     </footer>
 
     <div id="back-to-top" class="back-to-top">↑</div>
