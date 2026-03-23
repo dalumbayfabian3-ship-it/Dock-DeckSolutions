@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dock & Deck Solutions</title>
+    <meta name="description" content="Get in touch with Dock & Deck Solutions for yacht crew, provisioning, and marine engineering support.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+
+    <div id="scroll-progress"></div>
+
+    <nav class="navbar navbar-scrolled">
+        <div class="logo">
+            <img src="Logo.png" alt="Dock & Deck Solutions" class="littlelogo">
+            <a href="index.html">DOCK & <span>DECK SOLUTIONS</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="contact.html" class="primary-btn nav-cta">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="background: linear-gradient(rgba(10,35,66,0.8), rgba(10,35,66,0.8)), url('https://images.pexels.com/photos/144024/pexels-photo-144024.jpeg') center/cover;">
+        <div class="hero-content reveal">
+            <h1 style="letter-spacing: 2px;">GET IN TOUCH</h1>
+            <p>Ready to assist your vessel.</p>
+        </div>
+    </header>
+
+    <main class="about-section" style="padding: 80px 0;">
+        <div class="about-grid scroll-reveal">
+            
+            <div class="about-text">
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-family: 'Oswald'; color: var(--primary); margin-bottom: 15px;">OUR LOCATION</h3>
+                    <p style="margin-bottom: 15px;">
+                        <a href="https://www.google.com/maps?q=-8.6872,115.2343" target="_blank" style="text-decoration: none; color: inherit;">
+                            JALAN TUKAD BADUNG XIX NO 20B<br>
+                            DENPASAR BALI, 80239 INDONESIA
+                        </a>
+                    </p>
+                    
+                    <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid #eee; margin-bottom: 20px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.12345!2d115.2343!3d-8.6872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDEnMTMuOSJTIDExNcKwMTQnMDMuNSJF!5e0!3m2!1sen!2sid!4v1625000000000!5m2!1sen!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div style="background: #f4f7f9; padding: 25px; border-radius: 8px;">
+                    <h3 style="font-family: 'Oswald'; color: var(--primary); font-size: 1.1rem;">DIRECT CONTACT</h3>
+                    <p style="margin: 10px 0;"><strong>HQ:</strong> +62 851 9432 8743</p>
+                    <p style="margin-bottom: 20px;"><strong>Email:</strong> dockanddecksolution@gmail.com</p>
+                    
+                    <button onclick="toggleQR()" class="primary-btn" style="width: 100%; font-size: 0.8rem;">
+                         Scan Business QR
+                    </button>
+                </div>
+            </div>
+
+            <div class="about-text" style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h2 class="section-title" style="margin-bottom: 10px;">SEND A MESSAGE</h2>
+                <p style="margin-bottom: 30px; color: #666;">Fill out the form below and our team will get back to you within 24 hours.</p>
+
+                <form id="marineContactForm" action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <input type="hidden" name="access_key" value="4944f480-4740-4520-9ec9-6847b709ec87">
+                    <input type="hidden" name="redirect" value="thank-you.html">
+
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Full Name *</label>
+                        <input type="text" name="name" required placeholder="Enter your name" style="padding: 14px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Email Address *</label>
+                        <input type="email" name="email" required placeholder="email@address.com" style="padding: 14px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Inquiry Type</label>
+                        <select name="subject" style="padding: 14px; border: 1px solid #ddd; border-radius: 4px; background: white; font-family: inherit;">
+                            <option value="General">General Inquiry</option>
+                            <option value="quote">Request a Quote</option>
+                            <option value="crew">Crew Inquiry</option>
+                            <option value="tech">Technical Support</option>
+                            <option value="marine">Marine Supplies Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Message *</label>
+                        <textarea name="message" rows="5" required placeholder="How can we help you?" style="padding: 14px; border: 1px solid #ddd; border-radius: 4px; resize: vertical; font-family: inherit;"></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-btn" style="width: 100%; padding: 16px; cursor: pointer; font-size: 1rem;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="qrModal" class="qr-modal" style="display: none; position: fixed; z-index: 10001; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center;">
+        <div style="background: white; padding: 40px; border-radius: 12px; text-align: center; position: relative; max-width: 400px; width: 90%;">
+            <span onclick="toggleQR()" style="position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #888;">&times;</span>
+            <h3 style="font-family: 'Oswald'; color: var(--primary); margin-bottom: 10px;">BUSINESS CONTACT QR</h3>
+            <p style="font-size: 0.85rem; margin-bottom: 20px; color: #666;">Scan to save our contact details directly to your device.</p>
+            <img src="QRBUSINESS.jpg" alt="QR Code" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div id="thankYouModal" class="qr-modal" style="display: none; position: fixed; z-index: 10002; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 35, 66, 0.95); align-items: center; justify-content: center;">
+        <div style="background: white; padding: 50px 40px; border-radius: 12px; text-align: center; position: relative; max-width: 450px; width: 90%; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+            <div style="width: 80px; height: 80px; background: #4BB543; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 40px;">✓</div>
+            <h2 style="font-family: 'Oswald'; color: var(--primary); margin-bottom: 10px;">MESSAGE SENT!</h2>
+            <p style="color: #666; line-height: 1.6; margin-bottom: 25px;">Thank you for contacting Dock & Deck Solutions. Your inquiry has been received, and our maritime specialists will get back to you within 24 hours.</p>
+            <a href="index.html" class="primary-btn" style="width: 100%; display: block; text-decoration: none; padding: 15px 0;">Return to Home</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="logo" style="justify-content: center; margin-bottom: 20px;">
+            <a href="index.html" style="color: white; text-decoration: none;">DOCK & <span style="color: var(--accent);">DECK SOLUTIONS</span></a>
+        </div>
+        <p style="font-size: 0.85rem; opacity: 0.7; text-align: center;">© 2026 Dock & Deck Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <div id="back-to-top" class="back-to-top">↑</div>
+
+    <script>
+        function toggleQR() {
+            const modal = document.getElementById('qrModal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        const contactForm = document.getElementById('marineContactForm');
+        const thankYouModal = document.getElementById('thankYouModal');
+
+        contactForm.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            const data = new FormData(ev.target);
+            const submitBtn = ev.target.querySelector('button');
+            
+            submitBtn.innerText = "Sending...";
+            submitBtn.style.opacity = "0.7";
+            submitBtn.disabled = true;
+
+            fetch(ev.target.action, {
+                method: ev.target.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    thankYouModal.style.display = 'flex';
+                    contactForm.reset();
+                } else {
+                    alert("Oops! There was a problem. Please try again.");
+                }
+                submitBtn.innerText = "Send Message";
+                submitBtn.style.opacity = "1";
+                submitBtn.disabled = false;
+            }).catch(error => {
+                alert("Connection error. Please try again.");
+                submitBtn.innerText = "Send Message";
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
