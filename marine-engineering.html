@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Marine Engineering | Dock & Deck Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -16,6 +16,13 @@
             <img src="Logo.png" alt="logo" class="littlelogo">
             <a href="index.html">DOCK & <span>DECK SOLUTIONS</span></a>
         </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#services">Services</a></li> 
@@ -31,9 +38,9 @@
     </header>
 
     <main class="about-section">
-        <div class="about-grid scroll-reveal">
+        <div class="about-grid">
             
-            <aside class="about-text" style="background: #f4f7f9; padding: 40px; border-radius: 4px; height: fit-content;">
+            <aside class="about-text scroll-reveal" style="background: #f4f7f9; padding: 40px; border-radius: 4px; height: fit-content;">
                 <h3 style="font-family: 'Oswald'; color: var(--primary); margin-bottom: 20px; border-bottom: 2px solid var(--accent); padding-bottom: 10px;">CORE CAPABILITIES</h3>
                 <ul style="list-style: none; padding: 0; font-size: 0.9rem; line-height: 2;">
                     <li style="margin-bottom: 12px;">🛠️ <strong>Mobile Response:</strong> On-site repairs at any Bali marina.</li>
@@ -43,43 +50,43 @@
                 </ul>
                 <div style="margin-top: 30px; padding: 20px; background: white; border: 1px solid #e0e0e0; border-radius: 4px;">
                     <small style="display: block; color: #888; text-transform: uppercase; font-weight: bold; margin-bottom: 5px;">Compliance</small>
-                    <p style="font-size: 0.8rem; margin: 0;">All work performed according to <strong>IACS</strong> standards and local maritime regulations.</p>
+                    <p style="font-size: 0.8rem; margin: 0;">All work performed according to <strong>IACS</strong> standards.</p>
                 </div>
             </aside>
 
-            <div class="about-text">
+            <div class="about-text scroll-reveal">
                 <h2 class="section-title">HVAC & FABRICATION</h2>
                 <p class="lead-text">Expert technical solutions designed for the rigors of the marine environment.</p>
                 
-                <p>Dock & Deck Solutions provides high-tier engineering support for superyachts and commercial vessels. We understand that downtime isn't an option; our team focuses on rapid diagnostics and long-term mechanical reliability.</p>
+                <p>Dock & Deck Solutions provides high-tier engineering support for superyachts and commercial vessels. We focus on rapid diagnostics and long-term mechanical reliability.</p>
 
                 <div class="about-features" style="margin-top: 40px;">
-                    <div class="feature-item" style="background: white; border: 1px solid #eee; padding: 10px; transition: transform 0.3s ease;">
-                        <img src="ac8.jpg" alt="Retrofitting" style="width: 100%; border-radius: 2px; filter: grayscale(20%);">
+                    <div class="feature-item">
+                        <img src="ac8.jpg" alt="Retrofitting" style="width: 100%; border-radius: 2px;">
                         <div style="padding: 15px 5px;">
                             <strong style="color: var(--primary); font-family: 'Oswald';">RETROFITTING</strong>
-                            <p style="font-size: 0.8rem; margin-top: 5px; line-height: 1.4;">Seamless integration of modern HVAC units into existing vessel structures.</p>
+                            <p style="font-size: 0.8rem; margin-top: 5px; line-height: 1.4;">Integration of modern HVAC units into existing structures.</p>
                         </div>
                     </div>
-                    <div class="feature-item" style="background: white; border: 1px solid #eee; padding: 10px; transition: transform 0.3s ease;">
-                        <img src="ac7.jpg" alt="Welding" style="width: 100%; border-radius: 2px; filter: grayscale(20%);">
+                    <div class="feature-item">
+                        <img src="ac7.jpg" alt="Welding" style="width: 100%; border-radius: 2px;">
                         <div style="padding: 15px 5px;">
                             <strong style="color: var(--primary); font-family: 'Oswald';">TIG/MIG WELDING</strong>
-                            <p style="font-size: 0.8rem; margin-top: 5px; line-height: 1.4;">Certified welding for hull repairs and custom deck hardware fabrication.</p>
+                            <p style="font-size: 0.8rem; margin-top: 5px; line-height: 1.4;">Certified welding for hull repairs and hardware fabrication.</p>
                         </div>
                     </div>
-                    <div class="feature-item" style="background: white; border: 1px solid #eee; padding: 10px; transition: transform 0.3s ease;">
-                        <img src="ac5.jpg" alt="Diagnostics" style="width: 100%; border-radius: 2px; filter: grayscale(20%);">
+                    <div class="feature-item">
+                        <img src="ac5.jpg" alt="Diagnostics" style="width: 100%; border-radius: 2px;">
                         <div style="padding: 15px 5px;">
                             <strong style="color: var(--primary); font-family: 'Oswald';">DIAGNOSTICS</strong>
-                            <p style="font-size: 0.8rem; margin-top: 5px; line-height: 1.4;">Advanced thermal and pressure testing for all ship-board mechanical systems.</p>
+                            <p style="font-size: 0.8rem; margin-top: 5px; line-height: 1.4;">Advanced thermal and pressure testing for ship-board systems.</p>
                         </div>
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 60px; padding: 40px; background: #0a2342; border-radius: 4px; color: white;">
+                <div class="dispatch-box" style="text-align: center; margin-top: 60px; padding: 40px; background: #0a2342; border-radius: 4px; color: white;">
                     <h4 style="font-family: 'Oswald'; margin-bottom: 10px; letter-spacing: 1px;">URGENT TECHNICAL ASSISTANCE?</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 25px; opacity: 0.8;">Our engineers are available for immediate dispatch to major ports.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 25px; opacity: 0.8;">Our engineers are available for immediate dispatch.</p>
                     <a href="contact.html" class="primary-btn" style="background: var(--accent); color: white; border: none;">Request Dispatch</a>
                 </div>
             </div>
