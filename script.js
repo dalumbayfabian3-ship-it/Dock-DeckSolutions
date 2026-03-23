@@ -104,3 +104,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach the listener to the window's scroll event
     window.addEventListener('scroll', updateUIOnScroll, { passive: true });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    // Toggle Mobile Menu
+    menu.addEventListener('click', function() {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.toggle('active');
+        
+        // Optional: Animate hamburger into an 'X'
+        const bars = document.querySelectorAll('.bar');
+        if(menu.classList.contains('is-active')) {
+            bars[0].style.transform = "rotate(-45deg) translate(-5px, 6px)";
+            bars[1].style.opacity = "0";
+            bars[2].style.transform = "rotate(45deg) translate(-5px, -6px)";
+        } else {
+            bars[0].style.transform = "none";
+            bars[1].style.opacity = "1";
+            bars[2].style.transform = "none";
+        }
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+        menu.classList.remove('is-active');
+        menuLinks.classList.remove('active');
+    }));
+});
