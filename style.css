@@ -1,682 +1,1488 @@
 /* --- 1. CORE VARIABLES & FOUNDATION --- */
+
 :root {
+
     --primary: #0a2342;
+
     --accent: #00942c;
+
     --accent-bright: #00c83c;
+
     --white: #ffffff;
+
     --text-main: #334155;
+
     --bg-light: #f8fafc;
+
     --shadow: 0 10px 30px rgba(0,0,0,0.1);
+
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
+
+
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
+
 
 body {
+
     font-family: 'Inter', sans-serif;
+
     background-color: var(--bg-light);
+
     color: var(--text-main);
+
     line-height: 1.6;
+
     overflow-x: hidden;
+
 }
+
+
 
 /* --- 2. SCROLL PROGRESS BAR --- */
+
 #scroll-progress {
+
     position: fixed;
+
     top: 0;
+
     left: 0;
+
     width: 0%;
+
     height: 4px;
+
     background: var(--accent-bright);
+
     z-index: 10001;
+
     transition: width 0.1s ease;
+
 }
+
+
 
 /* --- 3. DYNAMIC NAVIGATION --- */
+
 .navbar {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     padding: 0 6%;
+
     height: 100px;
+
     position: fixed;
+
     top: 0;
+
     width: 100%;
+
     z-index: 10000;
+
     background: transparent;
+
     transition: var(--transition);
+
 }
+
+
 
 .navbar.scrolled {
+
     height: 75px;
+
     background: rgba(255, 255, 255, 0.98);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .logo {
+
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
 }
+
+
 
 .littlelogo {
+
     height: 45px;
+
     width: auto;
+
 }
+
+
 
 .logo a {
+
     text-decoration: none;
+
     font-weight: 700;
+
     color: var(--white);
+
     font-family: 'Oswald', sans-serif;
+
     text-transform: uppercase;
+
 }
+
+
 
 .logo span {
+
     color: var(--accent);
+
 }
+
+
 
 .nav-links {
+
     display: flex;
+
     list-style: none;
+
     gap: 35px;
+
     align-items: center;
+
 }
+
+
 
 .nav-links a {
+
     text-decoration: none;
+
     font-weight: 700;
+
     color: var(--white);
+
     text-transform: uppercase;
+
     font-size: 0.85rem;
+
     transition: var(--transition);
+
 }
+
+
 
 /* Color Swap on Scroll */
+
 .navbar.scrolled .logo a,
+
 .navbar.scrolled .nav-links a {
+
     color: var(--primary);
+
 }
+
+
 
 /* --- 4. HERO SECTION --- */
+
 .hero {
+
     height: 100vh;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
-    background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(10, 35, 66, 0.7)), 
+
+    background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(10, 35, 66, 0.7)),
+
                 url('https://images.pexels.com/photos/7574423/pexels-photo-7574423.jpeg');
+
     background-size: cover;
+
     background-position: center;
+
     color: var(--white);
+
 }
+
+
 
 .hero-content {
+
     max-width: 800px;
+
     padding: 0 20px;
+
 }
+
+
 
 .hero-content h1 {
+
     font-family: 'Oswald', sans-serif;
+
     font-size: clamp(2.5rem, 8vw, 4.5rem);
+
     margin-bottom: 20px;
+
 }
+
+
 
 /* --- 5. BUTTONS --- */
+
 .primary-btn {
+
     display: inline-block;
+
     padding: 14px 30px;
+
     background: var(--accent);
+
     color: var(--white) !important;
+
     text-decoration: none;
+
     font-family: 'Oswald', sans-serif;
+
     font-weight: 700;
+
     text-transform: uppercase;
+
     border-radius: 4px;
+
     transition: var(--transition);
+
     margin-top: 30px;
+
 }
+
+
 
 .primary-btn:hover {
+
     background: var(--accent-bright);
+
     transform: translateY(-3px);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .nav-cta {
+
     padding: 10px 20px;
+
     font-size: 0.8rem;
+
     margin-top: 0;
+
 }
+
+
 
 /* --- 6. ABOUT / CONTACT SECTION --- */
+
 .about-section {
+
     padding: 160px 8%; /* Increased top/bottom padding for a "bigger" section feel */
+
     background: var(--white);
-    overflow: visible; 
+
+    overflow: visible;
+
 }
+
+
 
 .about-grid {
+
     display: grid;
+
     grid-template-columns: 1fr 1.2fr; /* More space for the form column */
+
     gap: 100px; /* Wider gap between map and form */
+
     max-width: 1400px; /* Wider container for the whole section */
+
     margin: 0 auto;
+
     align-items: start;
-    overflow: visible; 
+
+    overflow: visible;
+
 }
+
+
 
 .about-image img {
+
     width: 100%;
+
     border-radius: 8px;
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .section-title {
+
     font-family: 'Oswald', sans-serif;
+
     font-size: 3.5rem; /* Bigger title */
+
     letter-spacing: 2px;
+
     color: var(--primary);
+
     margin-bottom: 30px;
+
     text-transform: uppercase;
+
 }
+
+
 
 .about-features {
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 20px;
+
     margin: 30px 0;
+
 }
+
+
 
 .feature-item {
+
     background: var(--bg-light);
+
     padding: 15px;
+
     border-radius: 4px;
+
     transition: var(--transition);
+
 }
+
+
 
 .feature-item:hover {
+
     background: #edf2f7;
+
     transform: scale(1.05);
+
 }
+
+
 
 /* --- 7. SERVICES SECTION --- */
+
 .services-container {
+
     padding: 100px 6%;
+
 }
+
+
 
 .service-list {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
     gap: 30px;
+
     max-width: 1200px;
+
     margin: 0 auto;
+
 }
+
+
 
 .service-card {
+
     background: var(--white);
+
     padding: 30px;
+
     border-radius: 8px;
+
     border: 1px solid #eee;
+
     transition: var(--transition);
+
 }
+
+
 
 .service-card:hover {
+
     transform: translateY(-10px);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 /* --- 8. ANIMATIONS & REVEALS --- */
+
 .reveal, .scroll-reveal, .service-card {
+
     opacity: 0;
+
     transform: translateY(30px);
+
     transition: 0.8s ease-out;
+
 }
+
+
 
 .reveal.active, .scroll-reveal.active, .service-card.active {
+
     opacity: 1 !important;
+
     transform: translateY(0) !important;
+
 }
+
+
 
 /* --- 9. MOBILE MENU (COMPACT & GREEN) --- */
+
 .menu-toggle {
+
     display: none;
+
     cursor: pointer;
+
     z-index: 1001;
+
 }
+
+
 
 .bar {
+
     display: block;
+
     width: 25px;
+
     height: 3px;
+
     margin: 5px 0;
+
     background: var(--accent);
+
     transition: 0.3s;
+
     border-radius: 2px;
+
 }
+
+
 
 /* --- 10. RESPONSIVE QUERIES --- */
+
 @media (max-width: 992px) {
+
     .menu-toggle { display: block; }
 
+
+
     .nav-links {
+
         position: fixed;
+
         right: -100%;
+
         top: 0;
+
         height: 100vh;
+
         width: 75%;
+
         background: var(--primary);
+
         flex-direction: column;
+
         justify-content: center;
+
         transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
         box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+
     }
+
+
 
     .nav-links.active {
+
         right: 0;
+
     }
+
+
 
     .nav-links li { margin: 20px 0; }
-    
-    .nav-links a { 
-        font-size: 1.2rem; 
-        color: var(--white) !important; 
+
+   
+
+    .nav-links a {
+
+        font-size: 1.2rem;
+
+        color: var(--white) !important;
+
     }
+
+
 
     .about-grid { grid-template-columns: 1fr; text-align: center; }
+
     .about-features { grid-template-columns: 1fr; }
-    
+
+   
+
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
 }
+
+
 
 @media (max-width: 768px) {
+
     .service-list { grid-template-columns: 1fr; }
+
     .hero h1 { font-size: 2.8rem; }
+
 }
+
+
 
 /* --- 11. UTILITY & FOOTER --- */
+
 .main-footer {
+
     background: var(--primary);
+
     color: var(--white);
+
     text-align: center;
+
     padding: 40px;
+
 }
+
+
 
 .back-to-top {
+
     position: fixed;
+
     bottom: 30px;
+
     right: 30px;
+
     width: 50px;
+
     height: 50px;
+
     background: var(--accent);
+
     color: var(--white);
+
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     cursor: pointer;
+
     z-index: 9999;
+
     transition: var(--transition);
+
     opacity: 0;
+
     visibility: hidden;
+
     transform: translateY(20px);
+
     box-shadow: var(--shadow);
+
 }
+
+
 
 .back-to-top.visible {
+
     opacity: 1;
+
     visibility: visible;
+
     transform: translateY(0);
+
 }
+
+
 
 /* --- Provisioning Professional Layout --- */
+
 .provisioning-container {
+
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 100px 20px;
+
 }
+
+
 
 .intro-block {
+
     text-align: center;
+
     max-width: 800px;
+
     margin: 0 auto 80px;
+
 }
+
+
 
 .subtitle {
+
     display: block;
+
     font-family: 'Oswald';
+
     letter-spacing: 3px;
+
     color: var(--accent);
+
     margin-bottom: 10px;
+
 }
+
+
 
 .hero-line {
+
     width: 60px;
+
     height: 3px;
+
     background: var(--accent);
+
     margin: 20px auto 0;
+
 }
+
+
 
 .provisioning-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 30px;
+
     margin-bottom: 80px;
+
 }
+
+
 
 .prov-card {
+
     background: white;
+
     border: 1px solid #eee;
+
     padding: 40px;
+
     transition: all 0.4s ease;
+
     border-radius: 2px;
+
 }
+
+
 
 .prov-card:hover {
+
     transform: translateY(-10px);
+
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+
     border-color: var(--primary);
+
 }
+
+
 
 .prov-icon {
+
     display: block;
+
     font-size: 2rem;
+
     margin-bottom: 15px;
-    filter: saturate(0); 
+
+    filter: saturate(0);
+
 }
+
+
 
 .prov-card:hover .prov-icon {
+
     filter: saturate(1);
+
 }
+
+
 
 .prov-header h3 {
+
     font-family: 'Oswald';
+
     color: var(--primary);
+
     font-size: 1.3rem;
+
     margin-bottom: 20px;
+
     letter-spacing: 1px;
+
 }
+
+
 
 .prov-body p {
+
     font-size: 0.95rem;
+
     line-height: 1.6;
+
     color: #666;
+
     margin-bottom: 20px;
+
 }
+
+
 
 .prov-list {
+
     list-style: none;
+
     padding: 0;
+
     border-top: 1px solid #f0f0f0;
+
     padding-top: 20px;
+
 }
+
+
 
 .prov-list li {
+
     font-size: 0.85rem;
+
     font-weight: 700;
+
     color: #444;
+
     margin-bottom: 8px;
+
     text-transform: uppercase;
+
     display: flex;
+
     align-items: center;
+
 }
+
+
 
 .prov-list li::before {
+
     content: "—";
+
     margin-right: 10px;
+
     color: var(--accent);
+
 }
+
+
 
 .cta-banner {
+
     background: var(--primary);
+
     color: white;
+
     padding: 60px;
+
     text-align: center;
+
     border-radius: 4px;
+
 }
+
+
 
 .cta-banner h3 {
+
     font-family: 'Oswald';
+
     font-size: 2rem;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .cta-banner p {
+
     margin-bottom: 30px;
+
     opacity: 0.8;
+
 }
 
-/* --- 12. LARGE SCALE CONTACT BREAKOUT --- */
+
+
+/* --- 12. LARGE WHITE SECTION / INTEGRATED FORM --- */
 @media (min-width: 993px) {
-    /* Make the Left Map Side Larger */
-    .mobile-map-wrapper {
-        height: 350px !important; /* Huge map height */
-        margin-top: 20px;
-    }
-
-    .form-mobile-container {
-        padding: 0 !important;
-        position: relative;
-    }
-
-    #marineContactForm {
+    /* This makes the white background part large and expansive */
+    .about-section {
+        padding: 120px 10% !important; 
         background: var(--white);
-        padding: 60px !important; /* Massive internal breathing room */
-        border-radius: 15px;
-        box-shadow: 0 40px 100px rgba(0,0,0,0.18); /* Stronger shadow for depth */
-        border: 1px solid #f0f0f0;
-        
-        /* The Breakout - Growing outward and popping vertically */
-        width: 135% !important;   
-        margin-left: -20% !important; 
-        margin-top: -60px;       
-        margin-bottom: -60px;    
-        
-        position: relative;
-        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* This aligns the Map and Form side-by-side inside the large white area */
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr; /* Equal-ish split */
+        gap: 80px; /* Large professional gap */
+        max-width: 1400px; /* Large container width */
+        width: 100%;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    /* The Map Side */
+    .mobile-map-wrapper {
+        height: 450px !important; /* Large professional map */
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #eee;
+    }
+
+    /* THE FORM: Integrated and clean, NOT breaking out */
+    #marineContactForm {
+        width: 100% !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
         display: flex;
         flex-direction: column;
-        gap: 20px !important; /* More space between inputs */
+        gap: 15px !important;
     }
 
-    /* Massive Input Styles */
+    /* Typography and Inputs to match your video style */
+    .form-mobile-container h2.section-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem !important;
+        color: var(--primary);
+        margin-bottom: 20px !important;
+        border-bottom: 3px solid var(--accent);
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
     #marineContactForm input, 
     #marineContactForm select, 
     #marineContactForm textarea {
-        padding: 22px !important; /* Huge clickable area */
-        font-size: 1.1rem !important;
-        border: 2px solid #edf2f7; /* Thicker borders */
-        background: #fafafa;
+        background: #f8fafc !important; /* Clean smoke-white */
+        border: 1px solid #e2e8f0 !important;
+        padding: 16px !important;
+        font-size: 1rem !important;
+        border-radius: 4px !important;
     }
 
     #marineContactForm button {
-        padding: 25px !important;
+        padding: 20px !important;
         font-size: 1.1rem !important;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        margin-top: 10px;
     }
 }
 
-/* Mobile Adjustments */
+/* Mobile stacking */
 @media (max-width: 992px) {
-    .about-section { padding: 60px 5%; }
-    .section-title { font-size: 2.2rem; text-align: left; }
-    #marineContactForm {
-        padding: 30px !important;
-        margin-top: 30px !important;
-    }
+    .about-section { padding: 60px 20px !important; }
+    .about-grid { display: flex; flex-direction: column; gap: 40px; }
+    #marineContactForm { width: 100% !important; }
 }
+
 /* Gallery Hover Effect */
+
 .gallery-img {
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                box-shadow 0.4s ease, 
+
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+
+                box-shadow 0.4s ease,
+
                 filter 0.3s ease;
+
 }
+
+
 
 .gallery-img:hover {
+
     transform: scale(1.08); /* Grows the image by 8% */
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
     filter: brightness(1.1); /* Makes it slightly brighter */
+
     z-index: 10; /* Ensures it stays on top of neighbors while growing */
+
 }
+
+
 
 /* Smooth Fade-in for the Pop-up Overlay */
+
 #imagePopup {
+
     transition: opacity 0.3s ease;
+
     opacity: 0;
+
     display: none; /* We toggle this to 'flex' via JS */
+
 }
+
+
 
 #imagePopup.active {
+
     opacity: 1;
+
 }
+
+
 
 /* The actual large image animation */
+
 #popupImg {
+
     transform: scale(0.7);
+
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 }
+
+
 
 #imagePopup.active #popupImg {
+
     transform: scale(1); /* Zooms from 70% to 100% on open */
+
 }
+
 /* --- Marine Supplies Subpage Additions --- */
 
+
+
 /* Vessel Section Styling */
+
 .vessel-box {
+
     background: #fff;
+
     border: 1px solid #eee;
+
     border-radius: 12px;
+
     padding: 40px;
+
     margin-bottom: 60px;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+
 }
+
+
 
 .vessel-header {
-    text-align: center; 
+
+    text-align: center;
+
     margin-bottom: 35px;
+
 }
+
+
 
 .vessel-header h2 {
-    font-family: 'Oswald', sans-serif; 
-    color: var(--primary); 
-    font-size: 2.2rem; 
+
+    font-family: 'Oswald', sans-serif;
+
+    color: var(--primary);
+
+    font-size: 2.2rem;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .vessel-badge {
-    color: var(--accent); 
-    font-weight: 700; 
-    letter-spacing: 1px; 
+
+    color: var(--accent);
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
     font-size: 0.9rem;
+
     text-transform: uppercase;
+
 }
+
+
 
 .vessel-description {
-    max-width: 850px; 
-    margin: 0 auto 40px auto; 
-    border-left: 4px solid var(--accent); 
+
+    max-width: 850px;
+
+    margin: 0 auto 40px auto;
+
+    border-left: 4px solid var(--accent);
+
     padding-left: 25px;
+
 }
+
+
 
 .vessel-grid {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 15px;
+
 }
+
+
 
 .vessel-card {
+
     text-align: center;
+
 }
+
+
 
 .vessel-card img {
-    width: 100%; 
-    height: 220px; 
-    object-fit: cover; 
-    border-radius: 6px; 
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
     cursor: pointer;
+
     transition: transform 0.3s ease;
+
 }
+
+
 
 .vessel-card img:hover {
+
     transform: scale(1.02);
+
 }
+
+
 
 /* Battery Section & Grid */
+
 .battery-section {
-    background: #f4f7f9; 
-    padding: 50px 30px; 
+
+    background: #f4f7f9;
+
+    padding: 50px 30px;
+
     border-radius: 12px;
+
 }
+
+
 
 .supply-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
     gap: 20px;
+
     margin-top: 30px;
+
 }
+
+
 
 .item-card {
+
     background: #fff;
+
     border: 1px solid #eef2f6;
+
     border-radius: 10px;
+
     padding: 20px;
+
     transition: all 0.3s ease;
+
     text-align: center;
+
     box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
 }
+
+
 
 .item-card:hover {
+
     transform: translateY(-5px);
+
     box-shadow: 0 10px 20px rgba(10, 35, 66, 0.1);
+
     border-color: var(--accent);
+
 }
+
+
 
 .item-card.premium {
+
     border: 2px solid var(--accent);
+
 }
+
+
 
 .item-card img {
+
     width: 100%;
+
     height: 150px;
+
     object-fit: contain;
+
     margin-bottom: 15px;
+
     cursor: pointer;
+
 }
+
+
 
 .item-card h4 {
+
     font-family: 'Oswald', sans-serif;
+
     font-size: 0.85rem;
+
     color: var(--primary);
+
     text-transform: uppercase;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .item-card p {
+
     font-size: 0.75rem;
+
     color: #666;
+
     line-height: 1.3;
+
 }
 
+
+
 /* Responsive Tweak for Mobile */
+
 @media (max-width: 768px) {
+
     .vessel-grid {
+
         grid-template-columns: 1fr;
+
     }
+
     .vessel-header h2 {
+
         font-size: 1.8rem;
+
     }
+
+}
+
+/* --- Specialized Services Section --- */
+
+.services-container {
+
+    padding: 80px 20px;
+
+    background-color: #f9fbfc; /* Subtle contrast from white sections */
+
+    text-align: center;
+
+}
+
+
+
+.section-header {
+
+    margin-bottom: 60px;
+
+}
+
+
+
+.section-title {
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 2.5rem;
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.title-accent {
+
+    width: 60px;
+
+    height: 4px;
+
+    background: var(--accent);
+
+    margin: 0 auto;
+
+}
+
+
+
+/* The Centering Logic */
+
+.service-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center; /* This centers the 7th card on the bottom row */
+
+    gap: 30px;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+}
+
+
+
+.service-card {
+
+    background: #fff;
+
+    flex: 0 1 360px; /* Cards will be ~360px but can shrink on mobile */
+
+    padding: 40px 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center; /* Centers icon, title, and button inside the card */
+
+    text-align: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    border: 1px solid #eee;
+
+}
+
+
+
+.service-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 40px rgba(10, 35, 66, 0.1);
+
+    border-color: var(--accent);
+
+}
+
+
+
+.card-icon {
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.service-card h3 {
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+
+}
+
+
+
+.service-card p {
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    color: #555;
+
+    margin-bottom: 25px;
+
+    flex-grow: 1; /* Ensures buttons align even if text length varies */
+
+}
+
+
+
+/* Responsive Tweak */
+
+@media (max-width: 768px) {
+
+    .service-card {
+
+        flex: 1 1 100%; /* Full width cards on mobile */
+
+    }
+
 }
