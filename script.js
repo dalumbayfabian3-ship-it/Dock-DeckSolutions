@@ -1,6 +1,6 @@
 /**
  * Dock & Deck Solutions - Master Interactive Logic
- * Handles: Navbar transitions, Scroll progress, Mobile Menu (with X animation), and Reveal Animations
+ * Handles: Navbar transitions, Scroll progress, Mobile Menu, and Reveal Animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,13 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollY = window.scrollY;
 
         // --- Navbar State (Transparent to White) ---
-        if (document.body.classList.contains('subpage')) {
-            nav.classList.add('scrolled');
-        } else {
-            if (scrollY > 50) {
+        if (nav) {
+            if (document.body.classList.contains('subpage')) {
                 nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('scrolled');
+                if (scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
             }
         }
 
@@ -59,15 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     /**
-     * 3. Mobile Navigation Logic (Merged & Fixed)
+     * 3. Mobile Navigation Logic
      */
     if (mobileMenu && navLinks) {
         mobileMenu.addEventListener('click', () => {
-            // Toggle Classes for CSS
             mobileMenu.classList.toggle('is-active');
             navLinks.classList.toggle('active');
 
-            // Handle the "X" animation directly in JS for smoothness
             if (mobileMenu.classList.contains('is-active')) {
                 bars[0].style.transform = "rotate(-45deg) translate(-5px, 6px)";
                 bars[1].style.opacity = "0";
@@ -83,10 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-close the mobile menu when a navigation link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
+            if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 mobileMenu.classList.remove('is-active');
-                // Reset bars
                 bars[0].style.transform = "none";
                 bars[1].style.opacity = "1";
                 bars[2].style.transform = "none";
@@ -109,79 +108,87 @@ document.addEventListener('DOMContentLoaded', () => {
     updateUIOnScroll();
     window.addEventListener('scroll', updateUIOnScroll, { passive: true });
 });
+
+/**
+ * 6. Contact Form Logic (Web3Forms)
+ * Wrapped in an 'if' block to prevent errors on pages without a form
+ */
 const form = document.getElementById('form');
 const result = document.getElementById('result');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(form);
-    
-    // Get the name input value
-    const name = formData.get('name');
-    
-    // Create a custom subject
-    const subject = `${name} sent a message from website`;
-    
-    // Append the custom subject to the form data
-    formData.append('subject', subject);
-    
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-    
-    result.innerHTML = "Please wait...";
+if (form && result) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const subject = `${name} sent a message from website`;
+        
+        formData.append('subject', subject);
+        
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        result.style.display = "block";
+        result.innerHTML = "Please wait...";
 
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: json
-    })
-    .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-            result.innerHTML = json.message;
-        } else {
-            console.log(response);
-            result.innerHTML = json.message;
-        }
-    })
-    .catch(error => {
-        console.log(error);
-        result.innerHTML = "Something went wrong!";
-    })
-    .then(function() {
-        form.reset();
-        setTimeout(() => {
-            result.style.display = "none";
-        }, 3000);
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let res = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = res.message;
+            } else {
+                result.innerHTML = res.message;
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 5000);
+        });
     });
-});
+}
+
+/**
+ * 7. Image Popup Logic
+ */
 function openPopup(src) {
     const popup = document.getElementById('imagePopup');
     const popupImg = document.getElementById('popupImg');
     
-    popupImg.src = src;
-    popup.style.display = 'flex';
-    
-    // Tiny delay to trigger the CSS opacity and scale transitions
-    setTimeout(() => {
-        popup.classList.add('active');
-    }, 10);
+    if (popup && popupImg) {
+        popupImg.src = src;
+        popup.style.display = 'flex';
+        
+        setTimeout(() => {
+            popup.classList.add('active');
+        }, 10);
 
-    document.body.style.overflow = 'hidden'; // Stop background scrolling
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 function closePopup() {
     const popup = document.getElementById('imagePopup');
     
-    popup.classList.remove('active');
-    
-    // Wait for the animation to finish before hiding the div
-    setTimeout(() => {
-        popup.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }, 300);
+    if (popup) {
+        popup.classList.remove('active');
+        
+        setTimeout(() => {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
 }
