@@ -6,12 +6,11 @@
     <title>Marine Supplies | Dock & Deck Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="logo.ico">
     
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
 </head>
 <body class="subpage">
 
@@ -19,7 +18,7 @@
 
     <nav class="navbar navbar-scrolled">
         <div class="logo">
-            <img src="logo.png" alt="logo" class="littlelogo">
+            <img src="Logo.png" alt="logo" class="littlelogo">
             <a href="index.html">DOCK & <span>DECK SOLUTIONS</span></a>
         </div>
 
@@ -36,47 +35,91 @@
         </ul>
     </nav>
 
-    <header class="hero" style="background-image: linear-gradient(rgba(10, 35, 66, 0.75), rgba(10, 35, 66, 0.75)), url('https://images.pexels.com/photos/555774/pexels-photo-555774.jpeg');">
-        <div class="hero-content reveal">
-            <h1 style="letter-spacing: 2px;">MARINE SUPPLIES</h1>
-            <p style="max-width: 600px; margin: 10px auto; opacity: 0.9;">Premium deck hardware, safety equipment, and technical tools for offshore excellence.</p>
+    <header class="hero" style="background-image: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.6)), url('https://images.pexels.com/photos/555774/pexels-photo-555774.jpeg');">
+        <div class="hero-content reveal active">
+            <h1>MARINE SUPPLIES</h1>
+            <p class="hero-subtext">Professional Procurement & Energy Storage Solutions</p>
         </div>
     </header>
 
     <main class="about-section">
-        <div class="about-grid scroll-reveal" style="max-width: 1000px; margin: 0 auto; display: block;">
+        <div class="container-1200">
             
-            <div class="about-text" style="text-align: center;">
-                <h2 class="section-title">EQUIPMENT SOLUTIONS</h2>
-                <p class="lead-text" style="margin-bottom: 50px;">From essential consumables to heavy-duty deck machinery, we provide a streamlined procurement process.</p>
-                
-                <div class="service-list-grid">
-                    <div class="service-card supply-card">
-                        <strong class="supply-tag">🛡️ SAFETY & LSA</strong>
-                        <p>SOLAS compliant life rafts, life jackets, and emergency signaling equipment.</p>
-                    </div>
+            <div class="service-list-grid">
+                <div class="service-card supply-card">
+                    <strong class="supply-tag">🛡️ SAFETY & LSA</strong>
+                    <p>SOLAS life rafts, jackets, and emergency signaling.</p>
+                </div>
+                <div class="service-card supply-card">
+                    <strong class="supply-tag">⚓ DECK HARDWARE</strong>
+                    <p>High-tensile stainless fittings and mooring lines.</p>
+                </div>
+                <div class="service-card supply-card">
+                    <strong class="supply-tag">🛠️ TECHNICAL TOOLS</strong>
+                    <p>Pneumatic tools, pumps, and engine room spares.</p>
+                </div>
+                <div class="service-card supply-card">
+                    <strong class="supply-tag">🔋 ENERGY SYSTEMS</strong>
+                    <p>CPOWER deep cycle and LiFePO4 battery storage.</p>
+                </div>
+            </div>
 
-                    <div class="service-card supply-card">
-                        <strong class="supply-tag">⚓ DECK HARDWARE</strong>
-                        <p>Marine-grade stainless steel fittings, shackles, and premium mooring lines.</p>
-                    </div>
-
-                    <div class="service-card supply-card">
-                        <strong class="supply-tag">🛠️ TECHNICAL TOOLS</strong>
-                        <p>Pneumatic tools, specialized marine pumps, and engine room consumables.</p>
-                    </div>
-
-                    <div class="service-card supply-card">
-                        <strong class="supply-tag">🧼 MAINTENANCE</strong>
-                        <p>Marine-grade coatings, anti-fouling, and eco-friendly cleaning agents.</p>
-                    </div>
+            <div class="vessel-box">
+                <div class="vessel-header">
+                    <h2>ALUMINUM VESSELS</h2>
+                    <p class="vessel-badge">AUSTRALIAN DESIGN | GLOBAL MANUFACTURING</p>
                 </div>
 
-                <div class="quote-box">
-                    <h4>Need a specific component?</h4>
-                    <p>Provide us with your part numbers or specifications for an immediate, competitive quote.</p>
-                    <a href="contact.html" class="primary-btn">Request Supply Quote</a>
+                <div class="vessel-description">
+                    <p class="lead">We supply high-performance <strong>Aluminum Boats</strong> built to rigorous <strong>Australian quality standards</strong>.</p>
+                    <p>By utilizing elite Australian naval architecture and precision manufacturing facilities in China, we deliver robust commercial vessels with world-class finishes at highly competitive price points.</p>
                 </div>
+
+                <div class="vessel-grid">
+                    <div class="vessel-card">
+                        <img src="boat1.jpg" onclick="openPopup(this.src)" alt="Workboats">
+                        <p class="caption">Workboats & Landing Craft</p>
+                    </div>
+                    <div class="vessel-card">
+                        <img src="boat2.jpg" onclick="openPopup(this.src)" alt="Hull Detail">
+                        <p class="caption">Lloyd's Grade Hull Construction</p>
+                    </div>
+                    <div class="vessel-card">
+                        <img src="boat3.jpg" onclick="openPopup(this.src)" alt="Patrol Vessels">
+                        <p class="caption">Custom Patrol & Leisure Builds</p>
+                    </div>
+                </div>
+            </div>
+
+            <section id="batteries" class="battery-section">
+                <div class="vessel-header">
+                    <h2>CPOWER ENERGY SOLUTIONS</h2>
+                    <p>High-performance storage for Marine, Solar, and Industrial applications.</p>
+                </div>
+
+                <div class="supply-grid">
+                    <div class="item-card"><img src="batt1.png" onclick="openPopup(this.src)"><h4>Tubular Deep Cycle</h4><p>Long life solar battery</p></div>
+                    <div class="item-card"><img src="batt2.png" onclick="openPopup(this.src)"><h4>Lead Carbon</h4><p>Fast charge long life</p></div>
+                    <div class="item-card"><img src="batt3.png" onclick="openPopup(this.src)"><h4>HTL High Temp</h4><p>Deep cycle GEL</p></div>
+                    <div class="item-card"><img src="batt4.png" onclick="openPopup(this.src)"><h4>HTD Series</h4><p>Deep cycle VRLA AGM</p></div>
+                    <div class="item-card"><img src="batt5.png" onclick="openPopup(this.src)"><h4>CS Sealed AGM</h4><p>Maintenance free</p></div>
+                    <div class="item-card"><img src="batt6.png" onclick="openPopup(this.src)"><h4>CG Series</h4><p>VRLA GEL battery</p></div>
+                    <div class="item-card"><img src="batt7.png" onclick="openPopup(this.src)"><h4>FT Series</h4><p>Front Terminal AGM</p></div>
+                    <div class="item-card"><img src="batt8.png" onclick="openPopup(this.src)"><h4>FL Series</h4><p>Front Terminal GEL</p></div>
+                    <div class="item-card"><img src="batt9.png" onclick="openPopup(this.src)"><h4>CL2 Deep Cycle</h4><p>Long life AGM</p></div>
+                    <div class="item-card"><img src="batt10.png" onclick="openPopup(this.src)"><h4>CG2 Deep Cycle</h4><p>Long life GEL</p></div>
+                    <div class="item-card"><img src="batt11.png" onclick="openPopup(this.src)"><h4>OPzv Tubular</h4><p>Tubular GEL battery</p></div>
+                    <div class="item-card"><img src="batt12.png" onclick="openPopup(this.src)"><h4>OPzS Flooded</h4><p>Flooded tubular</p></div>
+                    <div class="item-card"><img src="batt13.png" onclick="openPopup(this.src)"><h4>Small AGM</h4><p>Sealed lead acid</p></div>
+                    <div class="item-card"><img src="batt14.png" onclick="openPopup(this.src)"><h4>CH Series</h4><p>High discharge AGM</p></div>
+                    <div class="item-card premium"><img src="batt15.png" onclick="openPopup(this.src)"><h4 style="color:var(--accent)">LiFePO4 Lithium</h4><p>Maximum cycle life</p></div>
+                </div>
+            </section>
+
+            <div class="quote-box">
+                <h4>Request Technical Specifications</h4>
+                <p>Provide us with your part numbers or vessel requirements for a competitive quote.</p>
+                <a href="contact.html" class="primary-btn">Request Supply Quote</a>
             </div>
         </div>
     </main>
@@ -88,8 +131,23 @@
         <p style="font-size: 0.85rem; opacity: 0.7;">© 2026 Dock & Deck Solutions. All Rights Reserved.</p>
     </footer>
 
+    <div id="imagePopup" style="display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center; cursor: zoom-out;" onclick="closePopup()">
+        <span style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="popupImg" style="max-width: 85%; max-height: 85%; border-radius: 4px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+    </div>
+
     <div id="back-to-top" class="back-to-top">↑</div>
 
     <script src="script.js"></script>
+    <script>
+        /* Simple Lightbox Logic */
+        function openPopup(src) {
+            document.getElementById("popupImg").src = src;
+            document.getElementById("imagePopup").style.display = "flex";
+        }
+        function closePopup() {
+            document.getElementById("imagePopup").style.display = "none";
+        }
+    </script>
 </body>
 </html>
